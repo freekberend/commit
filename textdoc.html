@@ -1,0 +1,59 @@
+
+// uitdaging:  iedereen is welkom behalve fred
+
+// getallen: als iemand onder de 18 is dan mag hij geen alcohol kopen ROOD
+// uitdaging  OUDE wetgeving    onder 16 geen   tussen 16 en 18 is oranje bier en wijn plus 18 alles
+<script>
+    function eenfunctie(){
+//        alert();
+        var x = 25;
+
+        var invoer = document.getElementById("invoerveld").value;
+        console.log(invoer);
+        invoer = parseInt(invoer);   // indien je getal niet als een getal wordt gezien
+		if( isNaN(invoer)){
+			alert("doe getal");
+		}
+		if( invoer < 18 ){
+        	document.getElementById("uitkomst").innerHTML = "Je bent te jong";
+			if( invoer > 15){ 
+        		document.getElementById("uitkomst").style.backgroundColor = 'orange';
+			}else{
+				document.getElementById("uitkomst").style.backgroundColor = 'red';
+			}
+		}else{
+			document.getElementById("uitkomst").innerHTML = "Okee";
+        	document.getElementById("uitkomst").style.backgroundColor = 'green';
+
+		}
+
+ 
+       
+    }
+</script>
+
+<input type="text" id="invoerveld">
+<input onclick="eenfunctie()" type="button" value="klik hier">
+<div id="uitkomst""> test </div>
+
+<script>
+    function nogeenfunctie(){
+//        alert();
+        var x = 25;
+
+        var invoer = document.getElementById("leeftijd").value;
+        console.log(invoer);
+		if(invoer == "Fred"){
+			document.getElementById("uitkomst2").innerHTML = "Je bent niet welkom Fred";		
+		}else{
+        document.getElementById("uitkomst2").innerHTML = "Welkom "+(invoer);
+
+		}
+       
+    }
+</script>
+
+<input type="text" id="leeftijd">
+<input onclick="nogeenfunctie()" type="button" value="klik hier">
+<div id="uitkomst2""> test </div>
+
