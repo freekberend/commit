@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+    <script>
+        var aantal = 0;
+        var totaal = 0;
+        function actie(){
+                                            //            var aantal = 0;   // locale scope locale variabele
+            console.log("Er is een aantal keer geklikt");
+            console.log(aantal);
+            aantal++;
+            testfunctie( 5 );   // argument
+            testfunctie( 23 );   // argument
+            uitrekenen(4, 17);
+            uitrekenen(32, -147);
+            galgstreepjestekenen("voetbalschoen");
+            var resultaat = geefTerug();
+            console.log(totaal);
+            let tekst = document.getElementById("invoer").value;
+            let letter = tekst.charAt(4);
+            console.log(letter);
+            var mijnlijst = [23, 7, 12, 15];
+            console.log(mijnlijst[2]);
+            for(var y = 0; y < mijnlijst.length ; y++){
+                console.log(mijnlijst[y]);
+            }
+            var mijnwoord = "fietsen";
+            for(var y = 0; y < mijnwoord.length ; y++){
+                console.log(mijnwoord[y]);
+            }
+            document.getElementById("plaatje").src = "csharp.jpg";
+        }
+        function geefTerug(){
+            console.log("ik ben hier geweest");
+            totaal += 77;
+            return 77;
+        }
+
+
+        function testfunctie( paramgetal ){ // parameter
+            console.log("dit is in mijn tweede functie");
+            console.log(paramgetal);
+        }
+        function uitrekenen(getal1, getal2){
+            console.log(getal1 + getal2);
+        }
+        function galgstreepjestekenen(woord){
+            document.getElementById("uitkomst").innerHTML = "";
+            for(var x =0; x < woord.length; x++){
+                document.getElementById("uitkomst").innerHTML += " _";
+            }
+        }
+    </script>
+</head>
+<body>
+    <input id="invoer">
+    <button onclick="actie()">Klik Hier</button>
+    <div id="uitkomst"></div>
+    <img src="outsystems.jpg" height="230px" id="plaatje">
+</body>
+</html>

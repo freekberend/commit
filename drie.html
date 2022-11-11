@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+    <script>
+        function welkomfunctie(){
+            var invoer = document.getElementById("invoer").value;
+                console.log(invoer);
+            if (invoer == "hoi"){
+                document.getElementById("boodschap").innerHTML = "blub"
+            }if (invoer == "doei"){
+                document.getElementById("boodschap").innerHTML = "blieb"
+            }
+        }
+    </script>
+</head>
+<body>
+    <input id="invoer">
+    <button onclick="welkomfunctie()">klikhier</button>
+    <div id="boodschap">jo jo</div>
+</body>
+</html>
