@@ -13,17 +13,27 @@
         function welkomfunctie(){
             var invoer = document.getElementById("invoer").value;
                 console.log(invoer);
-            if (invoer == "hoi"){
-                document.getElementById("boodschap").innerHTML = "blub"
-            }if (invoer == "doei"){
-                document.getElementById("boodschap").innerHTML = "blieb"
+            var letter = document.getElementById("letter").value
+            var eofniet = invoer.indexOf("e");
+            console.log(eofniet);
+            if (eofniet > -1){
+                document.getElementById("boodschap").innerHTML = "eeeeee";
             }
+            var aantales = 0;
+            for (let i =0; i < invoer.length; i++){
+                if (invoer.charAt(i) == letter){
+                    aantales++
+                }
+            }
+            document.getElementById("boodschap2").innerHTML = aantales + " keer"
         }
     </script>
 </head>
 <body>
     <input id="invoer">
+    <input id="letter">
     <button onclick="welkomfunctie()">klikhier</button>
     <div id="boodschap">jo jo</div>
+    <div id="boodschap2">jo jo</div>
 </body>
 </html>
